@@ -1,4 +1,4 @@
-import { MatCardModule, MatIconModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatMenuModule } from '@angular/material';
+import { MatCardModule, MatIconModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatMenuModule, MatSelectModule } from '@angular/material';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -8,6 +8,7 @@ import { PessoasComponent } from './contatos/pessoas.component';
 import { PessoaFormComponent } from './contato-form/pessoa-form.component';
 import { PessoaViewComponent } from './contato-view/pessoa-view.component';
 import { CardPessoaComponent } from './card-contato/card-pessoa.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
 	declarations: [
@@ -18,6 +19,7 @@ import { CardPessoaComponent } from './card-contato/card-pessoa.component';
 	],
 	imports: [
 		MatFormFieldModule,
+		MatSelectModule,
 		MatButtonModule,
         MatInputModule,
 		MatCardModule,
@@ -26,6 +28,7 @@ import { CardPessoaComponent } from './card-contato/card-pessoa.component';
 		CommonModule,
 		FormsModule,
 		PipeModule,
+		MatDatepickerModule,
 	]
 })
 export class PessoaModule { }

@@ -39,13 +39,12 @@ export class PessoaFormComponent {
 		this.pessoaService.getById(id).subscribe(
 			_pessoa => {
 				this.pessoa = _pessoa
-				console.log(this.pessoa);
 			},
 			_error => this.utilService.aviso('Erro ao buscar o contato')
 		);
 	}
 	
-	salvarContato(pessoa): any {
+	salvarContato(pessoa: Pessoa): any {
 		this.pessoaService.save(pessoa).subscribe(
 			_ok => {
 				this.utilService.aviso('Lista atualizada com sucesso!');

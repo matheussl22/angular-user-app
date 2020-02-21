@@ -9,17 +9,22 @@
 		</mat-form-field>
 
 		<mat-form-field>
-			<input matInput placeholder="Cpf" name="cpf" [(ngModel)]="pessoa.cpf" required>
-		</mat-form-field>
-		
-		<mat-form-field>
-			<input matInput placeholder="Sexo" name="sexo" [(ngModel)]="pessoa.sexo" required class="form-control cpf-mask">
+			<input matInput placeholder="Cpf" name="cpf" (ngModelChange)="pessoa.cpf=$event" maxlength="14" [ngModel]="pessoa.cpf | cpf" required>
 		</mat-form-field>
 
 		<mat-form-field>
-			<input matInput placeholder="Nascimento" name="nascimento"  [(ngModel)]="pessoa.dataNascimento" required type="date">
+			<mat-label>Sexo</mat-label>
+			<mat-select name="sexo" [(ngModel)]="pessoa.sexo" required >
+				<mat-option value="MASCULINO">Masculino</mat-option>
+				<mat-option value="FEMININO">Feminino</mat-option>
+				<mat-option value="INDEFINIDO">Indefinido</mat-option>
+			</mat-select>
 		</mat-form-field>
-		
+
+		<mat-form-field>
+			<input matInput placeholder="Nascimento" name="nascimento" [(ngModel)]="pessoa.dataNascimento" required type="date">
+		</mat-form-field>
+
 		<mat-form-field>
 			<input matInput placeholder="Naturalidade" name="naturalidade" [(ngModel)]="pessoa.naturalidade">
 		</mat-form-field>
@@ -28,7 +33,7 @@
 			<input matInput placeholder="Nacionalidade" name="nacionalidade" [(ngModel)]="pessoa.nacionalidade">
 		</mat-form-field>
 
-		<button class="save-button" mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Salvar</button>
+		<button class="save-button" mat-raised-button color="primary" type="submit"
+			[disabled]="form.invalid">Salvar</button>
 	</form>
 </app-card-pessoa>
-

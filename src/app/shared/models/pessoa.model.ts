@@ -4,7 +4,7 @@ export class Pessoa {
     email: string;
     cpf: string;
     sexo: string;
-    dataNascimento: Date;
+    dataNascimento: any;
     naturalidade: string;
     nacionalidade: string;
 }
