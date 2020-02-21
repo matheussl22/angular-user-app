@@ -1,0 +1,11 @@
+
+.form {
+    display: flex;
+    flex-flow: column; 
+}
+
+.save-button {
+    background-color: #00bcb6;
+    color: white;
+    margin-top: 20px;
+}

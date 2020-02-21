@@ -1,0 +1,12 @@
+<mat-card class="card-container">
+	<span class="qtd-pessoas">{{pessoas.length}} pessoas Encontrados</span>
+	<div class="item" *ngFor="let pessoa of pessoas" (click)="navigatePessoaView(pessoa)">
+		<mat-icon class="user-icon">account_circle</mat-icon>
+		<span>{{pessoa.nome}}</span>
+		<span>{{pessoa.email}}</span>
+	</div>
+</mat-card>
+
+<button mat-fab class="button-add" (click)="cadastrarPessoa()">
+    <mat-icon>add</mat-icon>
+</button>

@@ -1,0 +1,25 @@
+<app-card-pessoa>
+	<div class="buttons">
+		<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+			<mat-icon>more_vert</mat-icon>
+		</button>
+		<mat-menu #menu="matMenu">
+			<button mat-menu-item (click)="navigateEdit(pessoa)">
+				<mat-icon>edit</mat-icon>
+				<span>Editar</span>
+			</button>
+		
+			<button mat-menu-item (click)="deletar(pessoa)">
+				<mat-icon>delete</mat-icon>
+				<span>Deletar</span>
+			</button>
+		</mat-menu>
+	</div>
+	<div class="info">
+		<h3>{{pessoa.nome}}</h3>
+		<span>{{pessoa.email}}</span>
+		<span>Naturalidade {{pessoa.naturalidade}}</span>
+		<span>Nacionalidade {{pessoa.nacionalidade}}</span>
+		<span>Nascido em {{pessoa.dataNascimento}}</span>
+	</div>
+</app-card-pessoa>

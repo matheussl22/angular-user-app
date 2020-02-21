@@ -1,0 +1,61 @@
+.card-container {
+    max-width: 900px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.qtd-contatos {
+    font-size: 20px;
+    color: #656565;
+    margin-bottom: 20px;
+}
+
+.item {
+    display: flex;
+    flex-flow: row;
+    padding: 20px;
+    border-top: 1px solid #e2e2e2;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    color: #656a6a;
+    cursor: pointer;
+}
+
+.item:last-child {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.item span {
+    flex: 1;
+}
+
+.user-icon {
+    color: #2fbcb6;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+}
+
+.button-add {
+    background-color: #00928d;
+    color: white;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+@media (max-width: 800px) {
+    
+    .item span:nth-child(1n + 3){
+        display: none;
+    }
+
+    :host {
+        padding: 0 20px;
+    }
+}

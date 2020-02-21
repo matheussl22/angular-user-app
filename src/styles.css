@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+    background-color: #F1F4F6;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto,
+    "Helvetica Neue", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    background-color: #F1F4F6;
+}
+
+.primary {
+    color: white;
+    background-color: #00bcb6;
+}
+
+.primary-black {
+    background-color: #00928d;
+    color: white;
+}

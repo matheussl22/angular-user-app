@@ -1,0 +1,21 @@
+<div class="toolbar-container primary">
+	<div class="first-container">
+		<h3 *ngIf="!showBackButton">Contatos</h3>
+		<button mat-icon-button *ngIf="showBackButton" (click)="navigationBack()" >
+			<mat-icon>arrow_back</mat-icon>
+		</button>
+	</div>
+
+	<div class="exit">
+	
+		<button mat-icon-button [matMenuTriggerFor]="menu" class="button-exit">
+			<mat-icon>person</mat-icon>
+		</button>
+		<mat-menu #menu="matMenu">
+			<button mat-menu-item (click)="doLogout()">
+				<mat-icon>exit_to_app</mat-icon>
+				<span>Sair</span>
+			</button>
+		</mat-menu>
+	</div>
+</div>

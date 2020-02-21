@@ -1,0 +1,34 @@
+<app-card-pessoa>
+	<form #form="ngForm" (ngSubmit)="salvarContato(pessoa)" autocomplete="off" class="form">
+		<mat-form-field>
+			<input matInput placeholder="Nome" name="nome" [(ngModel)]="pessoa.nome" required>
+		</mat-form-field>
+
+		<mat-form-field>
+			<input matInput placeholder="Email" name="email" [(ngModel)]="pessoa.email" required>
+		</mat-form-field>
+
+		<mat-form-field>
+			<input matInput placeholder="Cpf" name="cpf" [(ngModel)]="pessoa.cpf" required>
+		</mat-form-field>
+		
+		<mat-form-field>
+			<input matInput placeholder="Sexo" name="sexo" [(ngModel)]="pessoa.sexo" required class="form-control cpf-mask">
+		</mat-form-field>
+
+		<mat-form-field>
+			<input matInput placeholder="Nascimento" name="nascimento"  [(ngModel)]="pessoa.dataNascimento" required type="date">
+		</mat-form-field>
+		
+		<mat-form-field>
+			<input matInput placeholder="Naturalidade" name="naturalidade" [(ngModel)]="pessoa.naturalidade">
+		</mat-form-field>
+
+		<mat-form-field>
+			<input matInput placeholder="Nacionalidade" name="nacionalidade" [(ngModel)]="pessoa.nacionalidade">
+		</mat-form-field>
+
+		<button class="save-button" mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Salvar</button>
+	</form>
+</app-card-pessoa>
+

@@ -1,0 +1,17 @@
+
+<div class="container">
+	<mat-card class="login-container">
+		<img class="logo" src="../../../../assets/images/logo.png">
+		<form (ngSubmit)="onSubmitForm()" #form="ngForm" autocomplete="off" class="form">
+            <mat-form-field  color="primary" >
+                <input matInput placeholder="email" name="email"  [(ngModel)]="usuario.username" required type="email">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput  color="primary" placeholder="senha" name="senha" [(ngModel)]="usuario.password" required type="password">
+            </mat-form-field>
+
+            <button class="main-button" mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Entrar</button>
+        </form> 
+	</mat-card>
+</div>
